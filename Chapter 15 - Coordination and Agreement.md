@@ -58,7 +58,7 @@ it assumes that message delivery between processes is ***reliable***.
 
 **bully algorithm:**				each knows which which processes have higher identifiers, it can communicate with all such processes.
 
-![image-20200317233603873](/Users/jiong/Documents/GitHub/lohengrinnn/lohengrinnn.github.io/images/c15_8_bully_algorithm.png)
+![election_bully_algorithm](https://github.com/Lohengrinnn/Distributed-Systems/blob/master/images/c15_8_bully_algorithm.png?raw=true)
 
 Stage 1: Process *p*1 detects the failure of the coordinator *p*4 and announces an election.
 Stage 2: On receiving an *election* message from *p*1 , processes *p*2 and *p*3 send *answer* messages to *p*1 and begin their own elections; *p*3 sends an *answer* message to *p*2 , but *p*3 receives no *answer* message from the failed process *p*4. 
